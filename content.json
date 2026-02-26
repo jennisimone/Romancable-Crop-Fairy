@@ -1,0 +1,75 @@
+{
+    "Format": "2.5.0",
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Characters/{{ModId}}_Marigold",
+            "FromFile": "assets/overworldsprites.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/{{ModId}}_Marigold",
+            "FromFile": "assets/portraits.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dialogue/{{ModId}}_Marigold",
+            "FromFile": "assets/dialogue.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dialogue/MarriageDialogue{{ModId}}_Marigold",
+            "FromFile": "assets/marriageDialogue.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/schedules/{{ModId}}_Marigold",
+            "FromFile": "assets/schedule.json"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "{{ModId}}_Marigold": {
+                    "DisplayName": "Marigold",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 22,
+                    "HomeRegion": "Town",
+                    "Gender": "Female",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+
+                    "CanBeRomanced": true,
+
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "BusStop",
+                            "Tile": {
+                            "X": 16,
+                            "Y": 5
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "{{ModId}}_Marigold": "You're giving this to me? This is amazing!/207 232 233 400/Thank you! This is a very interesting specimen./-5 -79 422/...What is this?/80 330/This is disgusting./2/That was very thoughtful of you./-4/ "
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "{{ModId}}_Marigold0": "I can't believe I am about to be married!$h",
+                "{{ModId}}_Marigold1": "I hope I don't get cold feet"
+            }
+        }
+    ]
+}

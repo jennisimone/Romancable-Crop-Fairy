@@ -1,0 +1,11 @@
+{
+    "Name": "Marigold the crop fairy",
+    "Author": "jennisimone",
+    "Version": "1.0.0",
+    "Description": "This mod adds Marigold, your crop fairy! It makes her a full, romancable character.",
+    "UniqueID": "jennisimone.RomanceableCropFairy",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}
