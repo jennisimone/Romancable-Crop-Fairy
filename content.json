@@ -1,5 +1,5 @@
 {
-    "Format": "2.5.0",
+    "Format": "2.8.0",
     "Changes": [
         {
             "Action": "Load",
@@ -40,17 +40,16 @@
                     "Manner": "Polite",
                     "SocialAnxiety": "Outgoing",
                     "Optimism": "Positive",
-
                     "CanBeRomanced": true,
-
                     "Home": [
                         {
                             "Id": "Default",
-                            "Location": "BusStop",
+                            "Location": "{{ModId}}_MarigoldHouse",
                             "Tile": {
-                            "X": 16,
-                            "Y": 5
-                            }
+                                "X": 6,
+                                "Y": 4
+                            },
+                            "Direction": "down"
                         }
                     ]
                 }
@@ -70,6 +69,124 @@
                 "{{ModId}}_Marigold0": "I can't believe I am about to be married!$h",
                 "{{ModId}}_Marigold1": "I hope I don't get cold feet"
             }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "{{ModId}}_MarigoldHouse": {
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_MarigoldHouse"
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Priority": "Late",
+            "Target": "Maps/{{ModId}}_MarigoldHouse",
+            "AddWarps": [
+                "5 12 {{ModId}}_MushroomHouseWoods 7 9",
+                "6 12 {{ModId}}_MushroomHouseWoods 8 9"
+            ]
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_MarigoldHouse",
+            "FromFile": "assets/maps/MushroomHouseInterior.tmx"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "{{ModId}}_MushroomHouseWoods": {
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_MushroomHouseWoods"
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Priority": "Late",
+            "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+            "AddWarps": [
+                "7 16 Woods 7 0",
+                "8 16 Woods 8 0"
+            ],
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 7,
+                        "Y": 9
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 5 11 {{ModId}}_MarigoldHouse"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 8,
+                        "Y": 9
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 6 11 {{ModId}}_MarigoldHouse"
+                    }
+                }
+            ]
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+            "FromFile": "assets/maps/MushroomHouseWoods.tmx"
+        },
+        {
+            "LogName": "Add woods entrance",
+            "Action": "EditMap",
+            "Target": "Maps/Woods",
+            "Priority": "Late",
+            "ToArea": {
+                "X": 6,
+                "Y": 0,
+                "Width": 4,
+                "Height": 4
+            },
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 4,
+                "Height": 4
+            },
+            "FromFile": "assets/maps/Woods-Patch.tmx"
+        },
+        {
+            "Action": "EditMap",
+            "Priority": "Late",
+            "Target": "Maps/Woods",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 7,
+                        "Y": 0
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 7 15"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 8,
+                        "Y": 0
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 8 15"
+                    }
+                }
+            ]
         }
     ]
 }
