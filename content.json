@@ -34,13 +34,14 @@
                     "DisplayName": "Marigold",
                     "BirthSeason": "Spring",
                     "BirthDay": 22,
-                    "HomeRegion": "Town",
+                    "HomeRegion": "Other",
                     "Gender": "Female",
                     "Age": "Adult",
                     "Manner": "Polite",
                     "SocialAnxiety": "Outgoing",
                     "Optimism": "Positive",
                     "CanBeRomanced": true,
+                    "SocialTab": "HiddenUntilMet",
                     "Home": [
                         {
                             "Id": "Default",
@@ -51,16 +52,34 @@
                             },
                             "Direction": "down"
                         }
+                    ],
+                    "SpouseFloors": [
+                        "42",
+                        "49"
+                    ],
+                    "SpouseWallpapers": [
+                        "7",
+                        "29",
+                        "37",
+                        "43"
                     ]
                 }
             }
         },
         {
+            "Action": "Include",
+            "FromFile": "assets/events.json"
+        },
+        {
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "{{ModId}}_Marigold": "You're giving this to me? This is amazing!/207 232 233 400/Thank you! This is a very interesting specimen./-5 -79 422/...What is this?/80 330/This is disgusting./2/That was very thoughtful of you./-4/ "
+                "{{ModId}}_Marigold": "Wow! For me really?/595 340 359 221 233 417/Thank you! This is lovely/-80 -79 245 -27/...I don't know what to do with this/-5 -6 /How.. How could you kill this and then give it to me/-4 -14/That was very thoughtful of you.// "
             }
+            // Loved: Honey, Fairy Rose, Mead, Pink Cake, Ice cream, sweet gem berry
+            // Liked: Flowers, Fruits, Sugar, Syrup
+            // Dislike: Milk, eggs
+            // Hate: Fish, meat
         },
         {
             "Action": "EditData",

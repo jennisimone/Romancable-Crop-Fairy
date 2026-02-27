@@ -70,7 +70,7 @@
       1408,145,0,0,0,0,0,0,0,0,145,1415
 </data>
   </layer>
-  <layer id="3" name="Paths" width="12" height="12">
+  <layer id="3" name="Back3" width="12" height="12">
     <data encoding="csv">
       0,0,0,0,0,0,0,0,0,0,0,0,
       0,0,0,0,0,0,0,0,0,0,0,0,
