@@ -8,6 +8,11 @@
         },
         {
             "Action": "Load",
+            "Target": "Characters/{{ModId}}_Marigold_Fairy",
+            "FromFile": "assets/fairy_overworldsprites.png"
+        },
+        {
+            "Action": "Load",
             "Target": "Portraits/{{ModId}}_Marigold",
             "FromFile": "assets/portraits.png"
         },
@@ -62,6 +67,20 @@
                         "29",
                         "37",
                         "43"
+                    ],
+                    "Appearance": [
+                        {
+                            "Id": "Default",
+                            "Portrait": "Portraits/{{ModId}}_Marigold",
+                            "Sprite": "Characters/{{ModId}}_Marigold"
+                        },
+                        {
+                            "Id": "{{ModId}}_Marigold_Fairy",
+                            "Condition": false,
+                            "Portrait": "Portraits/{{ModId}}_Marigold",
+                            "Sprite": "Characters/{{ModId}}_Marigold_Fairy"
+                        }
+
                     ]
                 }
             }
@@ -76,10 +95,6 @@
             "Entries": {
                 "{{ModId}}_Marigold": "Wow! For me really?/595 340 359 221 233 417/Thank you! This is lovely/-80 -79 245 -27/...I don't know what to do with this/-5 -6 /How.. How could you kill this and then give it to me/-4 -14/That was very thoughtful of you.// "
             }
-            // Loved: Honey, Fairy Rose, Mead, Pink Cake, Ice cream, sweet gem berry
-            // Liked: Flowers, Fruits, Sugar, Syrup
-            // Dislike: Milk, eggs
-            // Hate: Fish, meat
         },
         {
             "Action": "EditData",
@@ -98,6 +113,14 @@
                         "MapPath": "Maps/{{ModId}}_MarigoldHouse"
                     }
                 }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/animationDescriptions",
+            "Entries": {
+                "{{ModId}}_Marigold_sleep": "17/17/17",
+                "{{ModId}}_Marigold_fairy": "18/18 19/18"
             }
         },
         {

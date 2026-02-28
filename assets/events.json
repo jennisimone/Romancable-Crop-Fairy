@@ -1,25 +1,25 @@
-    // 2 Hearts - (Secret woods) Marigold is in the secret woods looking at the Old Master Cannoli statue. She says she heard about him from her mother, he was a gentle man who was kind to the fairies. 
-    // 4 Hearts - (Woods) first event shows Marigold watching Penny and the children in the woods, the farmer sees her and after Penny leaves asks her why she was spying. Marigold is curious about people but doesn't know how to approach them
-    // 6 Hearts - (Mushroom house) Marigold sees the player and asks to talk. Wants to talk about how she has a hard time trusting humans. Farmer learns that her father was mistreated by people who wanted to use his magic. Fairy magic is highly sought after and people often try to use it for themselves. Explains that seeing the farmer tend the land and care for animals led her to trust them.
-    // 8 hearts - (Community Centre) Marigold sends you a note asking to meet her in the community centre in the afternoon. Enter community centre between 12pm - 5pm. Marigold explains she's ready to trust people again. She sent a note to Penny as well. Enter Penny and children, they act shocked when they see Marigold, Marigold introduces herself and asks their names. Farmer explains Marigold lives in the woods. Vincent asks if Marigold can fly, Jaz asks if she can become a fairy. 
-    // 10 hearts - (Mushroom woods) Marigold asks the Farmer to meet her at her house in the evening. Entering woods after 5pm triggers cut scene. Marigold tells Farmer she wants to take them somewhere special. Asks if she feels comfortable flying (no will end scene). Flies farmer and herself to date area. Has picnic, says she didn't think she could trust humans again after what happened to her dad, but being with farmer has helped her understand more about humans and she's learned not everyone is after magic, some people are after friendship and companions. Look at water together, tells farmer that they're special to her. She's been alone with the butterflies and frogs for so long she forgot what it meant to deeply know someone. Lean in for kiss and fade to black.
+// 2 Hearts - (Secret woods) Marigold is in the secret woods looking at the Old Master Cannoli statue. She says she heard about him from her mother, he was a gentle man who was kind to the fairies.
+// 4 Hearts - (Woods) first event shows Marigold watching Penny and the children in the woods, the farmer sees her and after Penny leaves asks her why she was spying. Marigold is curious about people but doesn't know how to approach them
+// 6 Hearts - (Mushroom house) Marigold sees the player and asks to talk. Wants to talk about how she has a hard time trusting humans. Farmer learns that her father was mistreated by people who wanted to use his magic. Fairy magic is highly sought after and people often try to use it for themselves. Explains that seeing the farmer tend the land and care for animals led her to trust them.
+// 8 hearts - (Community Centre) Marigold sends you a note asking to meet her in the community centre in the afternoon. Enter community centre between 12pm - 5pm. Marigold explains she's ready to trust people again. She sent a note to Penny as well. Enter Penny and children, they act shocked when they see Marigold, Marigold introduces herself and asks their names. Farmer explains Marigold lives in the woods. Vincent asks if Marigold can fly, Jaz asks if she can become a fairy.
+// 10 hearts - (Mushroom woods) Marigold asks the Farmer to meet her at her house in the evening. Entering woods after 5pm triggers cut scene. Marigold tells Farmer she wants to take them somewhere special. Asks if she feels comfortable flying (no will end scene). Flies farmer and herself to date area. Has picnic, says she didn't think she could trust humans again after what happened to her dad, but being with farmer has helped her understand more about humans and she's learned not everyone is after magic, some people are after friendship and companions. Look at water together, tells farmer that they're special to her. She's been alone with the butterflies and frogs for so long she forgot what it meant to deeply know someone. Lean in for kiss and fade to black.
+{
+  "Changes": [
     {
-        "Changes": [
-            {
-                "Action": "EditData",
-                "Target": "Data/Events/Woods",
-                "Priority": "Late",
-                "Entries": {
-                    "{CHANGE_ME}001/friendship {{ModId}}_Marigold 500": "woodsTheme/8 9/{{ModId}}_Marigold 9 8 0 farmer 19 13 3/move farmer -11 0 0/move farmer 0 -5 1/faceDirection {{ModId}}_Marigold 3/speak {{ModId}}_Marigold \"Hey @.$8\"/speak {{ModId}}_Marigold \"I was just looking at Old Master Cannoli here. You know my mother knew him back when he was alive.$8\"/emote farmer 16/speak {{ModId}}_Marigold \"Fairies live a lot longer than humans.$8\"/speak {{ModId}}_Marigold \"Cannoli was very kind to our kind. He understood us.$8\"/pause 200/speak {{ModId}}_Marigold \"Not everyone understands us..$8\"/emote {{ModId}}_Marigold 28/pause 200/emote {{ModId}}_Marigold 40/speak {{ModId}}_Marigold \"Sorry, I'm not feeling as cheerful as usual.$8\"/speak {{ModId}}_Marigold \"Thinking about my parents gets me down sometimes.$s\"/speak {{ModId}}_Marigold \"I miss them.$s\"/speak {{ModId}}_Marigold \"Sorry I think I need to be alone.$s\"/end dialogue {{ModId}}_Marigold \"Hey @, thanks for listening to me earlier, I appreciate you being there for me.\""
-                }
-            },
-            {
-                "Action": "EditData",
-                "Target": "Data/Events/Forest",
-                "Priority": "Late",
-                "Entries": {
-                    "{CHANGE_ME}001/friendship {{ModId}}_Marigold 1000": "woodsTheme/70 39/{{ModId}}_Marigold 58 36 2 farmer 82 39 3 Penny 71 50 2 Jas 69 50 2 Vincent 68 50 2/speak Penny \"Can anyone tell me what kind of fish live in this water?\"/jump Jas/speak Jas \"I can!$4\"/speak Penny \"Go ahead Jas\"/speak Jas \"Freshwater fish!$1\"/speak Penny \"Good job! Now who knows what freshwater means?\"/move farmer -9 0 3/emote farmer 8/faceDirection Penny 0/speak Penny \"Hi @, we were just talking about fish!\"/faceDirection farmer 2/speak Penny \"You fish right? Would you tell Jas and Vincent about what you've caught?\"/move farmer 0 9 2/faceDirection Penny 2/move {{ModId}}_Marigold 0 -20 0/fade/end dialogue {{ModId}}_Marigold \"Hi @..$b#Sorry about earlier, I heard voices in the woods and got curious.$b#I.. I didn't know how to approach them... or if  should..\""
-                }
-            }
-        ]
+      "Action": "EditData",
+      "Target": "Data/Events/Woods",
+      "Priority": "Late",
+      "Entries": {
+        "42996001/friendship {{ModId}}_Marigold 500": "woodsTheme/8 9/{{ModId}}_Marigold 9 8 0 farmer 19 13 3/move farmer -10 0 0/emote farmer 8/move farmer -1 0 1/move farmer 0 -5 1/faceDirection {{ModId}}_Marigold 3/speak {{ModId}}_Marigold \"Hey @.$8\"/speak {{ModId}}_Marigold \"I was just looking at Old Master Cannoli here. You know my mother knew him back when he was alive.$8\"/emote farmer 16/speak {{ModId}}_Marigold \"Fairies live a lot longer than humans.$8\"/speak {{ModId}}_Marigold \"Cannoli was very kind to our kind. He understood us.$8\"/pause 200/speak {{ModId}}_Marigold \"Not everyone understands us..$8\"/emote {{ModId}}_Marigold 28/pause 1000/emote {{ModId}}_Marigold 40/speak {{ModId}}_Marigold \"Sorry, I'm not feeling as cheerful as usual.$8\"/speak {{ModId}}_Marigold \"Thinking about my parents gets me down sometimes.$s\"/speak {{ModId}}_Marigold \"I miss them.$s\"/speak {{ModId}}_Marigold \"Sorry I think I need to be alone.$s\"/end dialogue {{ModId}}_Marigold \"Hey @, thanks for listening to me earlier, I appreciate you being there for me.\""
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Forest",
+      "Priority": "Late",
+      "Entries": {
+        "42996002/friendship {{ModId}}_Marigold 1000": "woodsTheme/70 43/{{ModId}}_Marigold 61 32 2 farmer 82 39 3 Penny 71 50 2 Jas 69 50 2 Vincent 68 50 2/changeSprite {{ModId}}_Marigold Fairy/move {{ModId}}_Marigold 0 6 1/speak Penny \"Can anyone tell me what kind of fish live in this water?\"/jump Jas/speak Jas \"I can!$4\"/speak Penny \"Go ahead Jas\"/speak Jas \"Freshwater fish!$1\"/speak Penny \"Good job! Now who knows what freshwater means?\"/move farmer -9 0 3/emote farmer 8/faceDirection Penny 0/speak Penny \"Hi @, we were just talking about fish!\"/faceDirection farmer 2/speak Penny \"You fish right? Would you tell Jas and Vincent about what you've caught?\"/move farmer 0 9 2/faceDirection Penny 2/move {{ModId}}_Marigold 0 -6 0/fade/end dialogue {{ModId}}_Marigold \"Hi @.. $b#You saw me earlier didn't you?$7#$b#I heard them in the forest, I just wanted to see how humans learn.\""
+      }
     }
+  ]
+}
