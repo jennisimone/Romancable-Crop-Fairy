@@ -1,234 +1,282 @@
 {
-    "Format": "2.8.0",
-    "Changes": [
-        {
-            "Action": "Load",
-            "Target": "Characters/{{ModId}}_Marigold",
-            "FromFile": "assets/overworldsprites.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/{{ModId}}_Marigold_Fairy",
-            "FromFile": "assets/fairy_overworldsprites.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Portraits/{{ModId}}_Marigold",
-            "FromFile": "assets/portraits.png"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/Dialogue/{{ModId}}_Marigold",
-            "FromFile": "assets/dialogue.json"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/Dialogue/MarriageDialogue{{ModId}}_Marigold",
-            "FromFile": "assets/marriageDialogue.json"
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/schedules/{{ModId}}_Marigold",
-            "FromFile": "assets/schedule.json"
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/Characters",
-            "Entries": {
-                "{{ModId}}_Marigold": {
-                    "DisplayName": "Marigold",
-                    "BirthSeason": "Spring",
-                    "BirthDay": 22,
-                    "HomeRegion": "Other",
-                    "Gender": "Female",
-                    "Age": "Adult",
-                    "Manner": "Polite",
-                    "SocialAnxiety": "Outgoing",
-                    "Optimism": "Positive",
-                    "CanBeRomanced": true,
-                    "SocialTab": "HiddenUntilMet",
-                    "Home": [
-                        {
-                            "Id": "Default",
-                            "Location": "{{ModId}}_MarigoldHouse",
-                            "Tile": {
-                                "X": 6,
-                                "Y": 4
-                            },
-                            "Direction": "down"
-                        }
-                    ],
-                    "SpouseFloors": [
-                        "42",
-                        "49"
-                    ],
-                    "SpouseWallpapers": [
-                        "7",
-                        "29",
-                        "37",
-                        "43"
-                    ],
-                    "Appearance": [
-                        {
-                            "Id": "Default",
-                            "Portrait": "Portraits/{{ModId}}_Marigold",
-                            "Sprite": "Characters/{{ModId}}_Marigold"
-                        },
-                        {
-                            "Id": "{{ModId}}_Marigold_Fairy",
-                            "Condition": false,
-                            "Portrait": "Portraits/{{ModId}}_Marigold",
-                            "Sprite": "Characters/{{ModId}}_Marigold_Fairy"
-                        }
-
-                    ]
-                }
-            }
-        },
-        {
-            "Action": "Include",
-            "FromFile": "assets/events.json"
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/NPCGiftTastes",
-            "Entries": {
-                "{{ModId}}_Marigold": "Wow! For me really?/595 340 359 221 233 417/Thank you! This is lovely/-80 -79 245 -27/...I don't know what to do with this/-5 -6 /How.. How could you kill this and then give it to me/-4 -14/That was very thoughtful of you.// "
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/EngagementDialogue",
-            "Entries": {
-                "{{ModId}}_Marigold0": "I can't believe I am about to be married!$h",
-                "{{ModId}}_Marigold1": "I hope I don't get cold feet"
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/Locations",
-            "Entries": {
-                "{{ModId}}_MarigoldHouse": {
-                    "CreateOnLoad": {
-                        "MapPath": "Maps/{{ModId}}_MarigoldHouse"
-                    }
-                }
-            }
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/animationDescriptions",
-            "Entries": {
-                "{{ModId}}_Marigold_sleep": "17/17/17",
-                "{{ModId}}_Marigold_fairy": "18/18 19/18"
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Priority": "Late",
-            "Target": "Maps/{{ModId}}_MarigoldHouse",
-            "AddWarps": [
-                "5 12 {{ModId}}_MushroomHouseWoods 7 9",
-                "6 12 {{ModId}}_MushroomHouseWoods 8 9"
-            ]
-        },
-        {
-            "Action": "Load",
-            "Target": "Maps/{{ModId}}_MarigoldHouse",
-            "FromFile": "assets/maps/MushroomHouseInterior.tmx"
-        },
-        {
-            "Action": "EditData",
-            "Target": "Data/Locations",
-            "Entries": {
-                "{{ModId}}_MushroomHouseWoods": {
-                    "CreateOnLoad": {
-                        "MapPath": "Maps/{{ModId}}_MushroomHouseWoods"
-                    }
-                }
-            }
-        },
-        {
-            "Action": "EditMap",
-            "Priority": "Late",
-            "Target": "Maps/{{ModId}}_MushroomHouseWoods",
-            "AddWarps": [
-                "7 16 Woods 7 0",
-                "8 16 Woods 8 0"
-            ],
-            "MapTiles": [
-                {
-                    "Position": {
-                        "X": 7,
-                        "Y": 9
-                    },
-                    "Layer": "Buildings",
-                    "SetProperties": {
-                        "Action": "Warp 5 11 {{ModId}}_MarigoldHouse"
-                    }
-                },
-                {
-                    "Position": {
-                        "X": 8,
-                        "Y": 9
-                    },
-                    "Layer": "Buildings",
-                    "SetProperties": {
-                        "Action": "Warp 6 11 {{ModId}}_MarigoldHouse"
-                    }
-                }
-            ]
-        },
-        {
-            "Action": "Load",
-            "Target": "Maps/{{ModId}}_MushroomHouseWoods",
-            "FromFile": "assets/maps/MushroomHouseWoods.tmx"
-        },
-        {
-            "LogName": "Add woods entrance",
-            "Action": "EditMap",
-            "Target": "Maps/Woods",
-            "Priority": "Late",
-            "ToArea": {
-                "X": 6,
-                "Y": 0,
-                "Width": 4,
-                "Height": 4
-            },
-            "FromArea": {
-                "X": 0,
-                "Y": 0,
-                "Width": 4,
-                "Height": 4
-            },
-            "FromFile": "assets/maps/Woods-Patch.tmx"
-        },
-        {
-            "Action": "EditMap",
-            "Priority": "Late",
-            "Target": "Maps/Woods",
-            "MapTiles": [
-                {
-                    "Position": {
-                        "X": 7,
-                        "Y": 0
-                    },
-                    "Layer": "Back",
-                    "SetProperties": {
-                        "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 7 15"
-                    }
-                },
-                {
-                    "Position": {
-                        "X": 8,
-                        "Y": 0
-                    },
-                    "Layer": "Back",
-                    "SetProperties": {
-                        "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 8 15"
-                    }
-                }
-            ]
+  "Format": "2.8.0",
+  "DynamicTokens": [
+    {
+      "Name": "Town",
+      "Value": ""
+    },
+    {
+      "Name": "Town",
+      "Value": "-town",
+      "When": {
+        "HasSeenEvent": "16304004"
+      }
+    }
+  ],
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Characters/{{ModId}}_Marigold",
+      "FromFile": "assets/overworldsprites.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/{{ModId}}_MarigoldHouse, Data/Events/{{ModId}}_MushroomHouseWoods, Characters/schedules/{{ModId}}_Marigold",
+      "FromFile": "assets/blank.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/{{ModId}}_Marigold_Fairy",
+      "FromFile": "assets/fairy_overworldsprites.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/{{ModId}}_Marigold",
+      "FromFile": "assets/portraits.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/{{ModId}}_Marigold",
+      "FromFile": "assets/dialogue.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogue{{ModId}}_Marigold",
+      "FromFile": "assets/marriageDialogue.json"
+    },
+    {
+      "Action": "Load",
+      "Priority": "High",
+      "Target": "Maps/{{ModId}}_MarigoldHouse",
+      "FromFile": "assets/maps/MushroomHouseInterior.tmx"
+    },
+    {
+      "Action": "Load",
+      "Priority": "High",
+      "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+      "FromFile": "assets/maps/MushroomHouseWoods.tmx"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "{{ModId}}_MarigoldHouse": {
+          "CreateOnLoad": {
+            "MapPath": "Maps/{{ModId}}_MarigoldHouse"
+          }
         }
-    ]
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "{{ModId}}_MushroomHouseWoods": {
+          "CreateOnLoad": {
+            "MapPath": "Maps/{{ModId}}_MushroomHouseWoods"
+          }
+        }
+      }
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/schedule.json"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/CJBok.CheatsMenu/Warps",
+      "Entries": {
+        "{{ModId}}_MushroomHouseWoods": {
+          "Id": "{{ModId}}_MushroomHouseWoods_Warp",
+          "SectionId": "Forest",
+          "DisplayName": "Mushroom House",
+          "Location": "{{ModId}}_MushroomHouseWoods",
+          "Tile": "7, 15"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/rainy",
+      "Entries": {
+        "{{ModId}}_Marigold": "It's really coming down today, the frogs love it! $9"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "{{ModId}}_Marigold": {
+          "DisplayName": "Marigold",
+          "BirthSeason": "Spring",
+          "BirthDay": 22,
+          "HomeRegion": "Other",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Positive",
+          "CanBeRomanced": true,
+          "SocialTab": "HiddenUntilMet",
+          "Home": [
+            {
+              "Id": "Default",
+              "Location": "{{ModId}}_MarigoldHouse",
+              "Tile": {
+                "X": 3,
+                "Y": 5
+              },
+              "Direction": "right"
+            }
+          ],
+          "SpouseFloors": [
+            "42",
+            "49"
+          ],
+          "SpouseWallpapers": [
+            "7",
+            "29",
+            "37",
+            "43"
+          ],
+          "Appearance": [
+            {
+              "Id": "Default",
+              "Portrait": "Portraits/{{ModId}}_Marigold",
+              "Sprite": "Characters/{{ModId}}_Marigold"
+            },
+            {
+              "Id": "{{ModId}}_Marigold_Fairy",
+              "Condition": false,
+              "Portrait": "Portraits/{{ModId}}_Marigold",
+              "Sprite": "Characters/{{ModId}}_Marigold_Fairy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_Marigold_8_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -{{ModId}}_Marigold [#]Meet me later?",
+        "{{ModId}}_Marigold_8_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -{{ModId}}_Marigold [#]Meet me later?",
+        "{{ModId}}_Marigold_8_Cinema": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -{{ModId}}_Marigold [#]Meet me later?"
+      }
+    },
+    {
+      "Action": "Include",
+      "FromFile": "assets/events.json"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "{{ModId}}_Marigold": "Wow! For me really?/595 340 359 221 233 417/Thank you! This is lovely/-80 -79 245 -27/...I don't know what to do with this/-5 -6 /How.. How could you kill this and then give it to me/-4 -14/That was very thoughtful of you.// "
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "{{ModId}}_Marigold0": "I can't believe I am about to be married!$h",
+        "{{ModId}}_Marigold1": "I hope I don't get cold feet"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "{{ModId}}_Marigold_sleep": "17/17/17",
+        "{{ModId}}_Marigold_fairy": "18/18 19/18",
+        "{{ModId}}_Marigold_sit_up": "16/16/16"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Priority": "Late",
+      "Target": "Maps/{{ModId}}_MarigoldHouse",
+      "AddWarps": [
+        "5 12 {{ModId}}_MushroomHouseWoods 7 10",
+        "6 12 {{ModId}}_MushroomHouseWoods 8 10"
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Priority": "Late",
+      "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+      "AddWarps": [
+        "7 16 Woods 7 0",
+        "8 16 Woods 8 0"
+      ],
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 5 11 {{ModId}}_MarigoldHouse"
+          }
+        },
+        {
+          "Position": {
+            "X": 8,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 6 11 {{ModId}}_MarigoldHouse"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Add woods entrance",
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "Priority": "Late",
+      "ToArea": {
+        "X": 6,
+        "Y": 0,
+        "Width": 4,
+        "Height": 4
+      },
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 4,
+        "Height": 4
+      },
+      "FromFile": "assets/maps/Woods-Patch.tmx"
+    },
+    {
+      "Action": "EditMap",
+      "Priority": "Late",
+      "Target": "Maps/Woods",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 0
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 7 15"
+          }
+        },
+        {
+          "Position": {
+            "X": 8,
+            "Y": 0
+          },
+          "Layer": "Back",
+          "SetProperties": {
+            "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 8 15"
+          }
+        }
+      ]
+    }
+  ]
 }

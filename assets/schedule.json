@@ -1,4 +1,12 @@
 {
-  "GreenRain": "800 {{ModId}}_MarigoldHouse 5 4 0",
-  "rain": "800 {{ModId}}_MarigoldHouse 5 4 0/"
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Characters/schedules/{{ModId}}_Marigold",
+      "Entries": {
+        "GreenRain": "800 {{ModId}}_MarigoldHouse 5 3 0",
+        "rain": "800 {{ModId}}_MarigoldHouse 5 4 0/1200 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up"
+      }
+    }
+  ]
 }
