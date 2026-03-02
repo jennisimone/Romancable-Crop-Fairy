@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="6" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" name="walls_and_floors" tilewidth="16" tileheight="16" tilecount="688" columns="16">
+  <image source="walls_and_floors.png" width="256" height="688"/>
+ </tileset>
+ <tileset firstgid="689" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2865" name="junimo_furniture" tilewidth="16" tileheight="16" tilecount="351" columns="13">
+  <image source="junimo_furniture.png" width="208" height="432"/>
+ </tileset>
+ <tileset firstgid="3216" name="retro_furniture" tilewidth="16" tileheight="16" tilecount="208" columns="13">
+  <image source="retro_furniture.png" width="208" height="265"/>
+ </tileset>
+ <tileset firstgid="3424" source="critters.tsx"/>
+ <layer id="3" name="Back" width="6" height="9">
+  <data encoding="csv">
+253,253,253,253,253,253,
+269,269,269,269,269,269,
+567,568,567,567,567,568,
+583,584,583,583,567,568,
+567,567,567,568,567,568,
+583,583,567,568,567,568,
+583,567,568,568,568,568,
+583,583,584,584,568,568,
+583,584,584,584,584,584
+</data>
+ </layer>
+ <layer id="4" name="Back2" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+2982,0,0,0,0,0,
+2995,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="1" name="Buildings" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+285,285,285,285,285,285,
+0,0,0,2962,2963,0,
+0,0,2949,2975,2976,2147486597,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Buildings2" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+2995,1798,0,0,0,0,
+0,1830,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,3323,3283,3284,3285,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Front" width="6" height="9">
+  <data encoding="csv">
+0,0,0,3372,3373,0,
+0,0,0,3385,3386,3856,
+0,3788,0,0,0,0,
+3008,0,2936,0,0,2147486584,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,3576,3310,3270,3271,3272,
+0,0,0,0,3800,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

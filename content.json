@@ -2,14 +2,24 @@
   "Format": "2.8.0",
   "DynamicTokens": [
     {
-      "Name": "Town",
-      "Value": ""
+      "Name": "EightHeartsEvent",
+      "Value": "Community",
+      "When": {
+        "IsJojaMartComplete": false
+      }
     },
     {
-      "Name": "Town",
-      "Value": "-town",
+      "Name": "EightHeartsEvent",
+      "Value": "Warehouse",
       "When": {
-        "HasSeenEvent": "16304004"
+        "IsJojaMartComplete": true
+      }
+    },
+    {
+      "Name": "EightHeartsEvent",
+      "Value": "Library",
+      "When": {
+        "hasFlag": "ccMovieTheaterJoja"
       }
     }
   ],
@@ -57,13 +67,56 @@
       "FromFile": "assets/maps/MushroomHouseWoods.tmx"
     },
     {
+      "Action": "Load",
+      "Priority": "High",
+      "Target": "Maps/{{ModId}}_Date",
+      "FromFile": "assets/maps/Marigold_Date.tmx"
+    },
+    {
+      "Action": "EditData",
+      "LogName": "Allow pathing in woods",
+      "Target": "Data/Locations",
+      "Priority": "Early",
+      "Fields": {
+        "Woods": {
+          "ExcludeFromNpcPathfinding": false
+        }
+      }
+    },
+    {
       "Action": "EditData",
       "Target": "Data/Locations",
       "Entries": {
         "{{ModId}}_MarigoldHouse": {
           "CreateOnLoad": {
             "MapPath": "Maps/{{ModId}}_MarigoldHouse"
-          }
+          },
+          "Forage": [
+            {
+              "Chance": 0.4,
+              "Id": "(O)595",
+              "ItemId": "(O)595",
+              "MaxItems": 2
+            },
+            {
+              "Chance": 0.3,
+              "Id": "(O)593",
+              "ItemId": "(O)593",
+              "MaxItems": 2
+            },
+            {
+              "Chance": 0.3,
+              "Id": "(O)597",
+              "ItemId": "(O)597",
+              "MaxItems": 3
+            },
+            {
+              "Chance": 0.3,
+              "Id": "(O)376",
+              "ItemId": "(O)376",
+              "MaxItems": 2
+            }
+          ]
         }
       }
     },
@@ -77,6 +130,16 @@
           }
         }
       }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/{{ModId}}_SpouseRooms",
+      "FromFile": "assets/maps/spouse-room.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/{{ModId}}_SpousePatios",
+      "FromFile": "assets/maps/patio.tmx"
     },
     {
       "Action": "Include",
@@ -129,6 +192,12 @@
               "Direction": "right"
             }
           ],
+          "SpouseRoom": {
+            "MapAsset": "{{ModId}}_SpouseRooms"
+          },
+          "SpousePatio": {
+            "MapAsset": "{{ModId}}_SpousePatios"
+          },
           "SpouseFloors": [
             "42",
             "49"
@@ -159,9 +228,39 @@
       "Action": "EditData",
       "Target": "Data/mail",
       "Entries": {
-        "{{ModId}}_Marigold_8_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -{{ModId}}_Marigold [#]Meet me later?",
-        "{{ModId}}_Marigold_8_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -{{ModId}}_Marigold [#]Meet me later?",
-        "{{ModId}}_Marigold_8_Cinema": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -{{ModId}}_Marigold [#]Meet me later?"
+        "{{ModId}}_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -{{ModId}}_Marigold [#]Meet me later?",
+        "{{ModId}}_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -{{ModId}}_Marigold [#]Meet me later?",
+        "{{ModId}}_Library": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -{{ModId}}_Marigold [#]Meet me later?"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_Letter_Library": {
+          "Id": "{{ModId}}_Letter_Library",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HAS_MAIL Host ccMovieTheaterJoja",
+          "Actions": [
+            "AddMail Current {{ModId}}_Library"
+          ]
+        },
+        "{{ModId}}_Letter_Warehouse": {
+          "Id": "{{ModId}}_Letter_Warehouse",
+          "Trigger": "DayEnding",
+          "Condition": "!PLAYER_HAS_MAIL Host ccMovieTheaterJoja, IS_JOJA_MART_COMPLETE",
+          "Actions": [
+            "AddMail Current {{ModId}}_Warehouse"
+          ]
+        },
+        "{{ModId}}_Letter_Community": {
+          "Id": "{{ModId}}_Letter_Community",
+          "Trigger": "DayEnding",
+          "Condition": "!IS_JOJA_MART_COMPLETE",
+          "Actions": [
+            "AddMail Current {{ModId}}_Library"
+          ]
+        }
       }
     },
     {
@@ -189,7 +288,8 @@
       "Entries": {
         "{{ModId}}_Marigold_sleep": "17/17/17",
         "{{ModId}}_Marigold_fairy": "18/18 19/18",
-        "{{ModId}}_Marigold_sit_up": "16/16/16"
+        "{{ModId}}_Marigold_sit_up": "16/16/16",
+        "{{ModId}}_Marigold_read": "20/20/20"
       }
     },
     {
@@ -206,8 +306,8 @@
       "Priority": "Late",
       "Target": "Maps/{{ModId}}_MushroomHouseWoods",
       "AddWarps": [
-        "7 16 Woods 7 0",
-        "8 16 Woods 8 0"
+        "7 16 Woods 7 1",
+        "8 16 Woods 8 1"
       ],
       "MapTiles": [
         {
@@ -255,27 +355,9 @@
       "Action": "EditMap",
       "Priority": "Late",
       "Target": "Maps/Woods",
-      "MapTiles": [
-        {
-          "Position": {
-            "X": 7,
-            "Y": 0
-          },
-          "Layer": "Back",
-          "SetProperties": {
-            "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 7 15"
-          }
-        },
-        {
-          "Position": {
-            "X": 8,
-            "Y": 0
-          },
-          "Layer": "Back",
-          "SetProperties": {
-            "TouchAction": "Warp {{ModId}}_MushroomHouseWoods 8 15"
-          }
-        }
+      "AddWarps": [
+        "7 0 {{ModId}}_MushroomHouseWoods 7 15",
+        "8 0 {{ModId}}_MushroomHouseWoods 8 15"
       ]
     }
   ]
