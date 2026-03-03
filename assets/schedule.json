@@ -18,18 +18,3 @@
     }
   ]
 }
-
-// {{ModId}}_MarigoldHouse 6 5 0 <- Painting
-// {{ModId}}_MarigoldHouse 5 4 0 <- Window
-// {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up <- Sit in chair
-// {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep <- Bed
-// {{ModId}}_MushroomHouseWoods 4 3 3 <- Outdoor flowers
-// {{ModId}}_MushroomHouseWoods 11 10 1 <- Pink frog
-// Woods 9 8 0 <- Statue
-// Woods 11 27 0 <- Lake bottom
-// Woods 42 28 0 {{ModId}}_Marigold_read <- Reading
-// Forest 39 11 0 {{ModId}}_Marigold_read <- Reading under pink tree
-// Forest 10 19 3 {{ModId}}_Marigold_fairy <- Travelling cart spy
-// Forest 33 96 3 <- Hat mouse
-// Saloon 22 17 2 <- Saloon
-// Beach 49 24 0 <- Ocean

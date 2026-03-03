@@ -5,9 +5,9 @@
   <properties>
     <property name="Outdoors" value="true" />
   </properties>
-  <tileset firstgid="1" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16"
+  <tileset firstgid="1" name="outdoorsTileSheet" tilewidth="16" tileheight="16"
     tilecount="1975" columns="25">
-    <image source="spring_outdoorsTileSheet.png" width="400" height="1264" />
+    <image source="outdoorsTileSheet.png" width="400" height="1264" />
   </tileset>
   <tileset firstgid="1976" name="junimo_furniture" tilewidth="16" tileheight="16" tilecount="351"
     columns="13">

@@ -1,28 +1,6 @@
 {
   "Format": "2.8.0",
-  "DynamicTokens": [
-    {
-      "Name": "EightHeartsEvent",
-      "Value": "Community",
-      "When": {
-        "IsJojaMartComplete": false
-      }
-    },
-    {
-      "Name": "EightHeartsEvent",
-      "Value": "Warehouse",
-      "When": {
-        "IsJojaMartComplete": true
-      }
-    },
-    {
-      "Name": "EightHeartsEvent",
-      "Value": "Library",
-      "When": {
-        "hasFlag": "ccMovieTheaterJoja"
-      }
-    }
-  ],
+  "DynamicTokens": [],
   "Changes": [
     {
       "Action": "Load",
@@ -145,19 +123,20 @@
       "Action": "Include",
       "FromFile": "assets/schedule.json"
     },
-    {
-      "Action": "EditData",
-      "Target": "Mods/CJBok.CheatsMenu/Warps",
-      "Entries": {
-        "{{ModId}}_MushroomHouseWoods": {
-          "Id": "{{ModId}}_MushroomHouseWoods_Warp",
-          "SectionId": "Forest",
-          "DisplayName": "Mushroom House",
-          "Location": "{{ModId}}_MushroomHouseWoods",
-          "Tile": "7, 15"
-        }
-      }
-    },
+//    ENABLE ME IF YOU WANT A WARP VIA CJB CHEAT MENU
+//    {
+//      "Action": "EditData",
+//      "Target": "Mods/CJBok.CheatsMenu/Warps",
+//      "Entries": {
+//        "{{ModId}}_MushroomHouseWoods": {
+//          "Id": "{{ModId}}_MushroomHouseWoods_Warp",
+//          "SectionId": "Forest",
+//          "DisplayName": "Mushroom House",
+//          "Location": "{{ModId}}_MushroomHouseWoods",
+//          "Tile": "7, 15"
+//        }
+//      }
+//    },
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/rainy",
@@ -228,9 +207,9 @@
       "Action": "EditData",
       "Target": "Data/mail",
       "Entries": {
-        "{{ModId}}_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -{{ModId}}_Marigold [#]Meet me later?",
-        "{{ModId}}_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -{{ModId}}_Marigold [#]Meet me later?",
-        "{{ModId}}_Library": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -{{ModId}}_Marigold [#]Meet me later?"
+        "{{ModId}}_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -Marigold [#]Meet me later?",
+        "{{ModId}}_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -Marigold [#]Meet me later?",
+        "{{ModId}}_Library": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -Marigold [#]Meet me later?"
       }
     },
     {
@@ -240,7 +219,7 @@
         "{{ModId}}_Letter_Library": {
           "Id": "{{ModId}}_Letter_Library",
           "Trigger": "DayEnding",
-          "Condition": "PLAYER_HAS_MAIL Host ccMovieTheaterJoja",
+          "Condition": "PLAYER_HAS_MAIL Host ccMovieTheaterJoja, PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Marigold 2000",
           "Actions": [
             "AddMail Current {{ModId}}_Library"
           ]
@@ -248,7 +227,7 @@
         "{{ModId}}_Letter_Warehouse": {
           "Id": "{{ModId}}_Letter_Warehouse",
           "Trigger": "DayEnding",
-          "Condition": "!PLAYER_HAS_MAIL Host ccMovieTheaterJoja, IS_JOJA_MART_COMPLETE",
+          "Condition": "!PLAYER_HAS_MAIL Host ccMovieTheaterJoja, IS_JOJA_MART_COMPLETE, PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Marigold 2000",
           "Actions": [
             "AddMail Current {{ModId}}_Warehouse"
           ]
@@ -256,9 +235,9 @@
         "{{ModId}}_Letter_Community": {
           "Id": "{{ModId}}_Letter_Community",
           "Trigger": "DayEnding",
-          "Condition": "!IS_JOJA_MART_COMPLETE",
+          "Condition": "!IS_JOJA_MART_COMPLETE, PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Marigold 2000",
           "Actions": [
-            "AddMail Current {{ModId}}_Library"
+            "AddMail Current {{ModId}}_Community"
           ]
         }
       }
