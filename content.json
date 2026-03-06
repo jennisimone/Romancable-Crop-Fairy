@@ -9,7 +9,8 @@
     },
     {
       "Action": "Load",
-      "Target": "Data/Events/{{ModId}}_MarigoldHouse, Data/Events/{{ModId}}_MushroomHouseWoods, Characters/schedules/{{ModId}}_Marigold",
+      "Target": "Data/Events/{{ModId}}_MarigoldHouse, Data/Events/{{ModId}}_MushroomHouseWoods, Characters/schedules/{{ModId}}_Marigold, Characters/Dialogue/{{ModId}}_Marigold,Characters/Dialogue/MarriageDialogue{{ModId}}_Marigold",
+
       "FromFile": "assets/blank.json"
     },
     {
@@ -23,13 +24,11 @@
       "FromFile": "assets/portraits.png"
     },
     {
-      "Action": "Load",
-      "Target": "Characters/Dialogue/{{ModId}}_Marigold",
+      "Action": "Include",
       "FromFile": "assets/dialogue.json"
     },
     {
-      "Action": "Load",
-      "Target": "Characters/Dialogue/MarriageDialogue{{ModId}}_Marigold",
+      "Action": "Include",
       "FromFile": "assets/marriageDialogue.json"
     },
     {
@@ -151,7 +150,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/rainy",
       "Entries": {
-        "{{ModId}}_Marigold": "It's really coming down today, the frogs love it! $9"
+        "{{ModId}}_Marigold": "{{i18n:rain.Marigold}}"
       }
     },
     {
@@ -217,9 +216,9 @@
       "Action": "EditData",
       "Target": "Data/mail",
       "Entries": {
-        "{{ModId}}_Community": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the community centre?  ^   -Marigold [#]Meet me later?",
-        "{{ModId}}_Warehouse": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon in the Joja warehouse?  ^   -Marigold [#]Meet me later?",
-        "{{ModId}}_Library": "@,^I have a favour to ask you,^I'm doing something big, could you meet this afternoon at the library?  ^   -Marigold [#]Meet me later?"
+        "{{ModId}}_Community": "{{i18n:mail.Community.text}} [#]{{i18n:mail.Community.title}}",
+        "{{ModId}}_Warehouse": "{{i18n:mail.Warehouse.text}} [#]{{i18n:mail.Warehouse.title}}",
+        "{{ModId}}_Library": "{{i18n:mail.Library.text}} [#]{{i18n:mail.Library.title}}"
       }
     },
     {
@@ -260,15 +259,15 @@
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "{{ModId}}_Marigold": "Wow! For me really?/595 340 359 221 233 417/Thank you! This is lovely/-80 -79 245 -27/...I don't know what to do with this/-5 -6 /How.. How could you kill this and then give it to me/-4 -14/That was very thoughtful of you.// "
+        "{{ModId}}_Marigold": "{{i18n:Marigold.love}}/595 340 359 221 233 417/{{i18n:Marigold.like}}/-80 -79 245 -27/{{i18n:Marigold.dislike}}/-5 -6 /{{i18n:Marigold.hate}}/-4 -14/{{i18n:Marigold.neutral}}// "
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/EngagementDialogue",
       "Entries": {
-        "{{ModId}}_Marigold0": "I can't believe I am about to be married!$h",
-        "{{ModId}}_Marigold1": "I hope I don't get cold feet"
+        "{{ModId}}_Marigold0": "{{i18n:engagement.Marigold0}}",
+        "{{ModId}}_Marigold1": "{{i18n:engagement.Marigold1}}"
       }
     },
     {
