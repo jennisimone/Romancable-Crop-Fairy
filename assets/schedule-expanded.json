@@ -7,13 +7,13 @@
         "GreenRain": "800 {{ModId}}_MarigoldHouse 5 3 0/2100 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
         "rain": "800 {{ModId}}_MarigoldHouse 5 4 0/1200 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/1600 {{ModId}}_MushroomHouseWoods 11 10 1/2000 {{ModId}}_MarigoldHouse 6 5 0/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
         "summer_Wed_8": "800 {{ModId}}_MarigoldHouse 5 4 0/1000 Beach 49 24 0/1700 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
-        "Fri_8": "800 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/1000 Forest 34 28 0 {{ModId}}_Marigold_read/1500 Saloon 22 17 2/2000 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
-        "spring": "700 {{ModId}}_MarigoldHouse 6 5 0/1100 Woods 34 28 0 {{ModId}}_Marigold_read/1700 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
-        "summer": "800 {{ModId}}_MarigoldHouse 5 4 0/1000 {{ModId}}_MushroomHouseWoods 4 3 3/1500 Woods 11 27 0/2000 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
+        "Fri_8": "800 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/1000 Forest 29 9 0 {{ModId}}_Marigold_read/1500 Saloon 22 17 2/2000 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
+        "spring": "700 {{ModId}}_MarigoldHouse 6 5 0/1100 Woods 29 9 0 {{ModId}}_Marigold_read/1700 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
+        "summer": "800 {{ModId}}_MarigoldHouse 5 4 0/1000 {{ModId}}_MushroomHouseWoods 4 3 3/1500 Woods 42 10 1/2000 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
         "fall": "900 {{ModId}}_MarigoldHouse 5 4 0/1100 {{ModId}}_MushroomHouseWoods 11 10 1/1400 Forest 33 96 3/1900 {{ModId}}_MarigoldHouse 6 5 0/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
         "winter": "800 {{ModId}}_MarigoldHouse 5 4 0/1000 {{ModId}}_MarigoldHouse 6 5 0/1400 Woods 9 8 0/1700 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
         "Sun": "800 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/1100 Forest 10 19 3 {{ModId}}_Marigold_fairy/1800 {{ModId}}_MarigoldHouse 6 5 0/2100 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep",
-        "spring_22": "800 {{ModId}}_MarigoldHouse 6 5 0/1200 {{ModId}}_MushroomHouseWoods 11 10 1/1500 Woods 34 28 0 {{ModId}}_Marigold_read/1900 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep"
+        "spring_22": "800 {{ModId}}_MarigoldHouse 6 5 0/1200 {{ModId}}_MushroomHouseWoods 11 10 1/1500 Woods 29 9 0 {{ModId}}_Marigold_read/1900 {{ModId}}_MarigoldHouse 8 7 0 {{ModId}}_Marigold_sit_up/2200 {{ModId}}_MarigoldHouse 3 5 3 {{ModId}}_Marigold_sleep"
       }
     }
   ]

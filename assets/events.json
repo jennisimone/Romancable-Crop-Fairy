@@ -3,8 +3,21 @@
     {
       "Action": "EditData",
       "Target": "Data/Events/Woods",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      },
       "Entries": {
         "{{ModId}}_Event_001/Friendship {{ModId}}_Marigold 500": "woodsTheme/8 9/{{ModId}}_Marigold 9 8 0 farmer 19 13 3/skippable/move farmer -10 0 0/pause 500/emote farmer 8/pause 500/move farmer -1 0 1/move farmer 0 -5 1/pause 500/faceDirection {{ModId}}_Marigold 3/pause 500/speak {{ModId}}_Marigold \"Hey @.\"/speak {{ModId}}_Marigold \"I was just looking at this statue. $8\"/speak {{ModId}}_Marigold \"His name was Cannoli. He lived near here hundreds of years ago. $h\"/emote farmer 16/speak {{ModId}}_Marigold \"I never met him of course! \"/speak {{ModId}}_Marigold \"But my mother knew him as a child.\"/speak {{ModId}}_Marigold \"Fairies live a lot longer than humans.\"/speak {{ModId}}_Marigold \"Cannoli was very kind to fairies. \"/speak {{ModId}}_Marigold \"Like us he enjoyed sweet food and being surrounded by nature. $h\"/pause 200/speak {{ModId}}_Marigold \"Not everyone treats fairies well.. $8\"/emote {{ModId}}_Marigold 28/pause 2000/emote {{ModId}}_Marigold 40/speak {{ModId}}_Marigold \"Sorry, I'm not feeling as cheerful as usual. $8\"/speak {{ModId}}_Marigold \"Thinking about my parents gets me down sometimes. $s\"/speak {{ModId}}_Marigold \"I miss them. $s\"/speak {{ModId}}_Marigold \"It's been 50 years since they passed. $s\"/speak {{ModId}}_Marigold \"Until you, I hadn't spoken to anyone in a really long time. $s\"/speak {{ModId}}_Marigold \"I really appreciate that you keep coming to see me. $8\"/speak {{ModId}}_Marigold \"I just hope I'm right to trust you. $8\"/speak {{ModId}}_Marigold \"I need to be alone for a little while now, but thank you for listening to me. $8\"/emote {{ModId}}_Marigold 20/pause 500/emote farmer 20/end dialogue {{ModId}}_Marigold \"Hey @, thanks for listening to me earlier, it's nice to have you to talk to.\""
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Woods",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Entries": {
+        "{{ModId}}_Event_009/Friendship {{ModId}}_Marigold 500": "woodsTheme/8 9/{{ModId}}_Marigold 9 8 0 farmer 8 16 0/skippable/pause 500/emote farmer 8/pause 500/move farmer 0 -8 1/pause 500/faceDirection {{ModId}}_Marigold 3/pause 500/speak {{ModId}}_Marigold \"Hey @.\"/speak {{ModId}}_Marigold \"I was just looking at this statue. $8\"/speak {{ModId}}_Marigold \"His name was Cannoli. He lived near here hundreds of years ago. $h\"/emote farmer 16/speak {{ModId}}_Marigold \"I never met him of course! \"/speak {{ModId}}_Marigold \"But my mother knew him as a child.\"/speak {{ModId}}_Marigold \"Fairies live a lot longer than humans.\"/speak {{ModId}}_Marigold \"Cannoli was very kind to fairies. \"/speak {{ModId}}_Marigold \"Like us he enjoyed sweet food and being surrounded by nature. $h\"/pause 200/speak {{ModId}}_Marigold \"Not everyone treats fairies well.. $8\"/emote {{ModId}}_Marigold 28/pause 2000/emote {{ModId}}_Marigold 40/speak {{ModId}}_Marigold \"Sorry, I'm not feeling as cheerful as usual. $8\"/speak {{ModId}}_Marigold \"Thinking about my parents gets me down sometimes. $s\"/speak {{ModId}}_Marigold \"I miss them. $s\"/speak {{ModId}}_Marigold \"It's been 50 years since they passed. $s\"/speak {{ModId}}_Marigold \"Until you, I hadn't spoken to anyone in a really long time. $s\"/speak {{ModId}}_Marigold \"I really appreciate that you keep coming to see me. $8\"/speak {{ModId}}_Marigold \"I just hope I'm right to trust you. $8\"/speak {{ModId}}_Marigold \"I need to be alone for a little while now, but thank you for listening to me. $8\"/emote {{ModId}}_Marigold 20/pause 500/emote farmer 20/end dialogue {{ModId}}_Marigold \"Hey @, thanks for listening to me earlier, it's nice to have you to talk to.\""
       }
     },
     {

@@ -1,5 +1,5 @@
 {
-  "Format": "2.8.0",
+  "Format": "2.9.0",
   "DynamicTokens": [],
   "Changes": [
     {
@@ -121,22 +121,32 @@
     },
     {
       "Action": "Include",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      },
       "FromFile": "assets/schedule.json"
     },
-//    ENABLE ME IF YOU WANT A WARP VIA CJB CHEAT MENU
-//    {
-//      "Action": "EditData",
-//      "Target": "Mods/CJBok.CheatsMenu/Warps",
-//      "Entries": {
-//        "{{ModId}}_MushroomHouseWoods": {
-//          "Id": "{{ModId}}_MushroomHouseWoods_Warp",
-//          "SectionId": "Forest",
-//          "DisplayName": "Mushroom House",
-//          "Location": "{{ModId}}_MushroomHouseWoods",
-//          "Tile": "7, 15"
-//        }
-//      }
-//    },
+    {
+      "Action": "Include",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "FromFile": "assets/schedule-expanded.json"
+    },
+    //    ENABLE ME IF YOU WANT A WARP VIA CJB CHEAT MENU
+    //    {
+    //      "Action": "EditData",
+    //      "Target": "Mods/CJBok.CheatsMenu/Warps",
+    //      "Entries": {
+    //        "{{ModId}}_MushroomHouseWoods": {
+    //          "Id": "{{ModId}}_MushroomHouseWoods_Warp",
+    //          "SectionId": "Forest",
+    //          "DisplayName": "Mushroom House",
+    //          "Location": "{{ModId}}_MushroomHouseWoods",
+    //          "Tile": "7, 15"
+    //        }
+    //      }
+    //    },
     {
       "Action": "EditData",
       "Target": "Characters/Dialogue/rainy",
@@ -284,9 +294,11 @@
       "Action": "EditMap",
       "Priority": "Late",
       "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
       "AddWarps": [
-        "7 16 Woods 7 1",
-        "8 16 Woods 8 1"
+        "7 16 Woods 24 1"
       ],
       "MapTiles": [
         {
@@ -312,8 +324,79 @@
       ]
     },
     {
-      "LogName": "Add woods entrance",
       "Action": "EditMap",
+      "Priority": "Late",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      },
+      "Target": "Maps/{{ModId}}_MushroomHouseWoods",
+      "AddWarps": [
+        "7 16 Woods 7 1",
+        "8 16 Woods 8 1"
+      ],
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 5 12 {{ModId}}_MarigoldHouse"
+          }
+        },
+        {
+          "Position": {
+            "X": 8,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 6 12 {{ModId}}_MarigoldHouse"
+          }
+        }
+      ]
+    },
+    {
+      "LogName": "Add woods entrance SDVE",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Action": "EditMap",
+      "Target": "Maps/Woods",
+      "Priority": "Late",
+      "ToArea": {
+        "X": 23,
+        "Y": 0,
+        "Width": 3,
+        "Height": 4
+      },
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 3,
+        "Height": 4
+      },
+      "FromFile": "assets/maps/Woods-Patch.tmx"
+    },
+    {
+      "Action": "EditMap",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "LogName": "Add mushroom house warp SDVE",
+      "Priority": "Late",
+      "Target": "Maps/Woods",
+      "AddWarps": [
+        "24 0 {{ModId}}_MushroomHouseWoods 7 15"
+      ]
+    },
+    {
+      "LogName": "Add woods entrance vanilla",
+      "Action": "EditMap",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      },
       "Target": "Maps/Woods",
       "Priority": "Late",
       "ToArea": {
@@ -331,7 +414,11 @@
       "FromFile": "assets/maps/Woods-Patch.tmx"
     },
     {
+      "LogName": "Add mushroom house warps vanilla",
       "Action": "EditMap",
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+      },
       "Priority": "Late",
       "Target": "Maps/Woods",
       "AddWarps": [
