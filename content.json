@@ -158,7 +158,7 @@
       "Target": "Data/Characters",
       "Entries": {
         "{{ModId}}_Marigold": {
-          "DisplayName": "Marigold",
+          "DisplayName": "{{i18n:name}}",
           "BirthSeason": "Spring",
           "BirthDay": 22,
           "HomeRegion": "Other",
@@ -341,7 +341,7 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "Warp 5 12 {{ModId}}_MarigoldHouse"
+            "Action": "Warp 5 11 {{ModId}}_MarigoldHouse"
           }
         },
         {
@@ -351,7 +351,7 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "Warp 6 12 {{ModId}}_MarigoldHouse"
+            "Action": "Warp 6 11 {{ModId}}_MarigoldHouse"
           }
         }
       ]

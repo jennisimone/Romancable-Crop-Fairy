@@ -1,4 +1,5 @@
 {
+  "name": "Marigold",
   // Standard dialogue
   "dialogue.Introduction": "Oh no! A human! $6#$e#Wait, are you the one who tends to the land near the lake? $7#$b#I think I can trust you.. $7#$b#I'm Marigold, what's your name? $u#$b#@ huh? I'll try and remember that! $h",
   "dialogue.divorced": "@.. Why are you here? $7#$b#Can't you just leave me alone? $s#",
