@@ -4,7 +4,7 @@
   <property name="Outdoors" value="true"/>
  </properties>
  <tileset firstgid="1" name="outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
-  <image source="outdoorsTileSheet" width="400" height="1264"/>
+  <image source="spring_outdoorsTileSheet" width="400" height="1264"/>
  </tileset>
  <tileset firstgid="1976" name="junimo_furniture" tilewidth="16" tileheight="16" tilecount="351" columns="13">
   <image source="junimo_furniture.png" width="208" height="432"/>
